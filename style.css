@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --dark: #00000065;
+    --darker: #3c434b;
+    --darkest: #111827;
+    --grey: #b5bac5;
+    --pink: #ffdafe8e;
+}
+
+body {
+    background-color: var(--darkest);
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--dark);
+    height: 15vh;
+    width: 100%;
+    padding: 40px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.76);
+    background-color: var(--dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: var(--darker);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: larger;
+    font-weight: bold;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem 1rem;
+    letter-spacing: .5px;
+}
+
+.movie-info .release-date {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--pink);
+    font-weight: lighter;
+} 
+
+.movie-info .score {
+    background-color: var(--darkest);
+    color: var(--grey);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform .4s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+} 
+
+
+//
